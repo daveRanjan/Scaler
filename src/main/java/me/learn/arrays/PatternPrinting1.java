@@ -73,7 +73,7 @@ import utils.ArrayUtils;
 public class PatternPrinting1 {
     public static void main(String[] args) {
         PatternPrinting1 pp1 = new PatternPrinting1();
-        int[][] sol = pp1.solve(4);
+        int[][] sol = pp1.solve(3);
         ArrayUtils.toString(sol);
     }
 
