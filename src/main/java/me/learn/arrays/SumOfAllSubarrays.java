@@ -50,21 +50,29 @@ package me.learn.arrays;
 
 import me.learn.Solution;
 
+import java.math.BigInteger;
+
 public class SumOfAllSubarrays {
     public static void main(String[] args) {
-        System.out.println(new SumOfAllSubarrays().solve(new int[]{1, 2, 3}));
+        System.out.println(new SumOfAllSubarrays().solve1(new int[]{2, 9, 5}));
     }
 
 
     // Solved using occurence technique
     // Each item will occur in (i+1)*(N-i) times in each subset
     public long solve1(int[] A){
-        long grandSum = 0;
+        BigInteger grandSum = BigInteger.ZERO;
+//        long grandSum = 0;
         int N = A.length;
         for (int i = 0; i < N; i++) {
-            grandSum +=(A[i]* (i+1) * (N-i));
+            BigInteger product = BigInteger.ONE
+                    .multiply(BigInteger.valueOf(A[i]))
+                    .multiply(BigInteger.valueOf(i+1))
+                    .multiply(BigInteger.valueOf(N-i));
+            grandSum = grandSum.add(product);
+//            grandSum +=(A[i]* (i+1) * (N-i));
         }
-        return grandSum;
+        return grandSum.longValue();
     }
 
     // Solved using carrysum technique
