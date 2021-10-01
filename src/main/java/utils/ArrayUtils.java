@@ -17,4 +17,12 @@ public class ArrayUtils {
         }
         System.out.println("]");
     }
+
+    public static int sumOfAllElements(int[] A, int i,int j){
+        int sum = 0;
+        for (int k = i; k <= j; k++) {
+            sum+=A[k];
+        }
+        return sum;
+    }
 }
