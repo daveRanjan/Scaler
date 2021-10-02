@@ -1,4 +1,4 @@
-package me.learn.arrays;
+package me.learn.scaler.arrays;
 /**
  * Sum of All Subarrays
  * Problem Description
@@ -47,8 +47,6 @@ package me.learn.arrays;
  *
  * Similiar to the first example, the sum of all subarray sums for this array is 19.
  */
-
-import me.learn.Solution;
 
 import java.math.BigInteger;
 

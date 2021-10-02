@@ -1,4 +1,4 @@
-package me.learn.arrays;
+package me.learn.scaler.arrays;
 
 /**
  * Arithmetic Progression?

@@ -1,7 +1,4 @@
-package me.learn.arrays;
-
-import java.util.ArrayList;
-import java.util.List;
+package me.learn.scaler.arrays;
 
 /**
  * Closest MinMax
@@ -77,6 +74,7 @@ public class ClosestMinMax {
                 minIndex = i;
             }
         }
+
         int d = Math.abs(maxIndex-minIndex);
         for (int i = 0; i < A.length; i++) {
             if(A[i] == max){
