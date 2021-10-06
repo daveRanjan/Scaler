@@ -1,6 +1,6 @@
 package me.learn.scaler.arrays;
 
-import utils.ArrayUtils;
+import utils.ToStringUtils;
 
 /**
  * Pattern Printing -2
@@ -72,7 +72,7 @@ public class PatternPrinting2 {
     public static void main(String[] args) {
         PatternPrinting2 pp1 = new PatternPrinting2();
         int[][] sol = pp1.solve(3);
-        ArrayUtils.toString(sol);
+        ToStringUtils.toString(sol);
     }
 
     private int[][] solve(int A) {

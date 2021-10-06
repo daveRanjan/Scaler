@@ -54,39 +54,35 @@ package me.learn.scaler.arrays;
 public class ClosestMinMax {
 
     public static void main(String[] args) {
-        int sol = new ClosestMinMax().solve(new int[]{2});
+        int sol = new ClosestMinMax().solve(new int[]{1, 3});
         System.out.println(sol);
     }
 
     public int solve(int[] A){
+        int N = A.length;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        int minIndex = -1;
-        int maxIndex = -1;
-        for (int i = 0; i < A.length; i++) {
-            if(A[i] > max){
-                max = A[i];
-                maxIndex = i;
-            }
-
-           if(A[i] < min){
-                min = A[i];
-                minIndex = i;
-            }
+        int minIndex = 2*N;
+        int maxIndex = 2*N;
+        for (int i = 0; i < N; i++) {
+            max = Math.max(max, A[i]);
+            min = Math.min(min, A[i]);
         }
 
-        int d = Math.abs(maxIndex-minIndex);
-        for (int i = 0; i < A.length; i++) {
+        if(max == min) return 1;
+
+        int ans = N;
+        for (int i = N-1; i >= 0; i--) {
             if(A[i] == max){
-                d = d > Math.abs(i-minIndex) ?  Math.abs(i-minIndex): d;
-            }
-
-            if(A[i] == min){
-                d = d > Math.abs(maxIndex-i) ?  Math.abs(maxIndex-i) :d;
+                ans = Math.min(ans, (minIndex-i+1));
+                maxIndex=i;
+            }else if(A[i] == min){
+                ans = Math.min(ans, maxIndex -i+1);
+                minIndex=i;
             }
         }
 
-        return d+1;
+        return ans;
 
     }
 }

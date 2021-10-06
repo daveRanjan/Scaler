@@ -1,6 +1,6 @@
 package me.learn.scaler.arrays;
 
-import utils.ArrayUtils;
+import utils.ToStringUtils;
 
 import java.util.Arrays;
 
@@ -48,6 +48,6 @@ public class BeggersOutsideTemple {
         // Calculate prefix sum
 
 
-        return ArrayUtils.prefixSum(B);
+        return ToStringUtils.prefixSum(B);
     }
 }
