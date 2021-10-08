@@ -75,7 +75,7 @@ public class PatternPrinting2 {
         ToStringUtils.toString(sol);
     }
 
-    private int[][] solve(int A) {
+    public int[][] solve(int A) {
         int[][] sol = new int[A][A];
         for (int i = 0; i < A; i++) {
             for (int j = 0; j <= i; j++) {
