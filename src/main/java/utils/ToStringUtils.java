@@ -18,7 +18,18 @@ public class ToStringUtils {
         System.out.println("]");
     }
 
+    public static void toString(char[][] sol) {
+        System.out.println("[");
+        for (int i = 0; i < sol.length; i++) {
+            System.out.println(Arrays.toString(sol[i]));
+        }
+        System.out.println("]");
+    }
+
     public static void toString(int sol) {
+        System.out.println(sol);
+    }
+    public static void toString(Object sol) {
         System.out.println(sol);
     }
 
